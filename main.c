@@ -53,7 +53,7 @@ static void write_version(
       *c = '\0';
     new_fname = safe_calloc(strlen(fname) + strlen(dirname) + 32);
     snprintf(new_fname, strlen(fname) + strlen(dirname) + 32,
-             "%s/%s-version-%d.pdf", dirname, fname, xref->version);
+             "static/%s-version-%d.pdf", dirname, fname, xref->version);
 
     if (!(new_fp = fopen(new_fname, "w")))
     {
